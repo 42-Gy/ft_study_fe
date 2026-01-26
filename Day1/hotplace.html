@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>자기소개 홈페이지</title>
+    <!-- 파일 만들때, 폴더 하나 생성해서 그 안에 css,와 html 같이 넣어줘야 아래 경로처럼 사용 가능 -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <!-- 구글 폰트 추가 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div><a class="button" href="main.html">Home</a></div>
+        <h1 class="title">웹프론트엔드 개발자 HONG</h1>
+        <div><a class="button" href="hotplace.html">맛집 리스트</a></div>
+      </nav>
+    </header>
+
+    <section class="mainSection" id="hpSection">
+      <h1 class="mainText">맛집 리스트</h1>
+      <div class="hpList">
+        <!-- div에 링크 걸기 -->
+        <div
+          class="li"
+          onclick="location.href = 'http\://www.naver.com'"
+          style="cursor: pointer"
+        >
+          <h2>월남면반</h2>
+          <img src="https://picsum.photos/100/100" alt="사진" />
+          <p>
+            심하게 맛있는집.베트남음식 첨먹어봤는데 부담없고.오히려
+            다이어트식이고.소스도맛있구요.서비스하시는 여사장님도 친절하시고.
+          </p>
+          <button class="like">&#10084;</button>
+        </div>
+        <hr />
+        <div
+          class="li"
+          onclick="location.href = 'http\://www.naver.com'"
+          style="cursor: pointer"
+        >
+          <h2>맛집 2</h2>
+          <img src="https://picsum.photos/100/100" alt="사진" />
+          <p>맛집 2 소개글</p>
+          <button class="like">&#10084;</button>
+        </div>
+        <hr />
+        <div
+          class="li"
+          onclick="location.href = 'http\://www.naver.com'"
+          style="cursor: pointer"
+        >
+          <h2>맛집 3</h2>
+          <img src="https://picsum.photos/100/100" alt="사진" />
+          <p>맛집 3 소개글</p>
+          <button class="like">&#10084;</button>
+        </div>
+        <hr />
+        <div
+          class="li"
+          onclick="location.href = 'http\://www.naver.com'"
+          style="cursor: pointer"
+        >
+          <h2>맛집 4</h2>
+          <img src="https://picsum.photos/100/100" alt="사진" />
+          <p>맛집 4 소개글</p>
+          <button class="like">&#10084;</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>이메일: chan@hahah.coding</p>
+      <p>소속: 42gy</p>
+      <p>주소: 경산</p>
+      <p>연락처: 123-456-7890</p>
+    </footer>
+    <script src="js/mouseover.js"></script>
+    <script src="js/like.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

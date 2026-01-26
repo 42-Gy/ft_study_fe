@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+html {
+  background-color: white;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh; /*화면에서 높이?*/
+  width: 100vw; /*화면에서 가로폭*/
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  /* 상단에 고정하기 - 4회차에서 설명, 추가 예정 */
+  /* 스크롤 해도 상단에 고정 되도록 하는 코드 */
+  position: sticky;
+  top: 0; /*top위의 여유 공간*/
+}
+
+.navbar {
+  background-color: #fffa78;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  margin-bottom: 2rem;
+  /* rem 개념 설명도 같이 해주기 제가 하겠습니다 ㅋㅋㅋㅋ */
+  /* rem은 상대적인 단위, 만약 기본 글꼴이 16px이다 치면 1rem은 16px인것이다.*/
+}
+
+.button {
+  display: block;
+  text-align: center;
+  margin: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  background: #ffd228;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.title {
+  /* 구글 폰트 사용 */
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: xx-large;
+}
+
+.mainSection {
+  background-color: #fffa78;
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* mainSection 하위 모든 요소들에게 1rem씩 패딩 주기 */
+.mainSection * {
+  margin: 1rem;
+}
+
+.mainText {
+  font-size: x-large;
+  margin-top: 2rem;
+}
+
+.questionBox {
+  border: 2px solid gray;
+  background-color: whitesmoke;
+}
+
+.questionBox > h2 {
+  font-weight: bold;
+}
+
+.footer {
+  padding: 1.5rem;
+  background: #fffa78;
+  color: gray;
+  text-align: left; /*하나 더 선언해서 center있길래 지웠음*/
+}
+
+/* hotplace css */
+#hpSection {
+  height: 73.5vh;
+}
+/*hpList전체*/
+.hpList {
+  background-color: whitesmoke;
+  width: 80%;
+  height: 80%;
+  border: 2px solid gray; /*border하려던거 맞는지 물어보기*/
+  overflow: auto;
+}
+/*hpList에서 li만*/
+.hpList > .li {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/*hpList에서 li중에서 h2만*/
+.hpList > .li > h2 {
+  width: 20%;
+  font-weight: bold;
+  text-align: center;
+}
+/*hpList에서 li중에서 p만*/
+.hpList > .li > p {
+  width: 60%;
+}
+.mouseover {
+  background-color: #dedede;
+}
+
+.clickLiked {
+  color: red;
+}

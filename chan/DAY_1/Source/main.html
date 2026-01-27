@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Day1 과제 - 챙's Page</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="main.html">DAY1</a>
+        <div class="menu">
+          <a class="button" href="#about">소개</a>
+          <a class="button" href="#study">학습기록</a>
+        </div>
+      </nav>
+    </header>
+
+    <section id="about" class="mainSection">
+      <h1 class="mainText">챙's Page</h1>
+      <h2 id="clock">00:00:00</h2>
+      
+      <div class="profile-box">
+        <img class="profile-img" src="./img/image.jpg" alt="나의 프로필 사진" />
+      </div>
+
+      <div class="intro-text">
+        <div class="qna-box">
+          <h2>Q1. 나를 한마디로 표현한다면?</h2>
+          <p>노력파</p>
+        </div>
+        
+        <div class="qna-box">
+          <h2>Q2. 나의 강점은 무엇인가?</h2>
+          <p>책임감이 강하다.</p>
+        </div>
+
+        <div class="qna-box">
+          <h2>Q3. 나의 단점은 무엇인가?</h2>
+          <p>생각이 많다.</p>
+        </div>
+
+        <div class="qna-box">
+          <h2>Q4. 이루고 싶은 것은 어떤 것인가?</h2>
+          <p>성장할 수 있는 개발자가 되는 것!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="study" class="studySection">
+      <h2>📝 오늘의 학습 기록</h2>
+      <div class="card-container">
+        <article class="card">
+          <h3>HTML 시맨틱 태그</h3>
+          <p>콘텐츠의 의미와 역할을 명확히 나타내는 태그</p>
+        </article>
+        <article class="card">
+          <h3>Flexbox 레이아웃</h3>
+          <p>웹 페이지의 구성 요소를 행 또는 열 단위의 1차원으로 유연하게 배치할 수 있는 CSS 레이아웃 모델</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>ID: chan</p>
+      <p>Email: chan@student.42gyeongsan.kr</p>
+      <p>Contact: 010-1234-5678</p>
+    </footer>
+
+    <script src="js/clock.js"></script>
+
+  </body>
+</html>

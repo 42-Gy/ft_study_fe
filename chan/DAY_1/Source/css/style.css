@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Do Hyeon', sans-serif;
+  background-color: #e3f2fd;
+  color: #333;
+}
+
+/* --- Header & Nav --- */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #2196f3;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 80px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.button {
+  background-color: #64b5f6;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease; /* trasition 사용 */
+}
+
+.button:hover {
+  background-color: #1565c0; /* 호버 시 더 진한 파란색 */
+  transform: translateY(-3px);
+}
+
+/* --- Main Section --- */
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.mainText {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: #0d47a1;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  border: 5px solid #64b5f6; 
+}
+
+
+.intro-text {
+  text-align: center; 
+  max-width: 600px;   
+  width: 100%;
+}
+
+.qna-box {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.qna-box h2 {
+  color: #1976d2;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+/* --- Study Section --- */
+.studySection {
+  background-color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.studySection h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #64b5f6; 
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #bbdefb;
+  padding: 1.5rem;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: #1e88e5;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}

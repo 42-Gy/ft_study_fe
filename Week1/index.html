@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUBAK | My Page (Vanilla)</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="logo">🍉</span>
+          <div class="brand-text">
+            <h1 class="title">SUBAK</h1>
+            <p class="subtitle">My Page (Vanilla Mock)</p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <input
+            id="tokenInput"
+            class="token-input"
+            type="text"
+            placeholder="Bearer 토큰 입력"
+            aria-label="액세스 토큰 입력"
+          />
+          <button id="reloadBtn" class="btn primary">새로고침</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel" aria-live="polite">
+        <div id="statusArea" class="status">
+          <span class="badge">READY</span>
+          <span class="status-text"
+            >상단 새로고침 버튼을 눌러 데이터를 불러오세요.</span
+          >
+        </div>
+      </section>
+
+      <section class="grid">
+        <section class="panel">
+          <h2 class="panel-title">내 정보</h2>
+
+          <div id="profileArea" class="profile skeleton">
+            <div class="row">
+              <div class="label">이름</div>
+              <div class="value">로딩중...</div>
+            </div>
+            <div class="row">
+              <div class="label">이메일</div>
+              <div class="value">로딩중...</div>
+            </div>
+            <div class="row">
+              <div class="label">코인</div>
+              <div class="value">로딩중...</div>
+            </div>
+            <div class="row">
+              <div class="label">역할</div>
+              <div class="value">로딩중...</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-title">대여 현황</h2>
+
+          <div id="rentalArea" class="rental skeleton">
+            <div class="row">
+              <div class="label">사물함</div>
+              <div class="value">로딩중...</div>
+            </div>
+            <div class="row">
+              <div class="label">구역</div>
+              <div class="value">로딩중...</div>
+            </div>
+            <div class="row">
+              <div class="label">대여 시작</div>
+              <div class="value">로딩중...</div>
+            </div>
+            <div class="row">
+              <div class="label">만료</div>
+              <div class="value">로딩중...</div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2 class="panel-title">내 기록</h2>
+
+          <div class="tabs" role="tablist" aria-label="내 기록 탭">
+            <button
+              class="tab active"
+              role="tab"
+              aria-selected="true"
+              data-tab="items"
+            >
+              아이템/물품 기록
+            </button>
+            <button
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              data-tab="coins"
+            >
+              코인 기록
+            </button>
+          </div>
+        </div>
+
+        <div class="filters">
+          <label class="filter">
+            상태:
+            <select id="itemStatusFilter">
+              <option value="ALL">전체</option>
+              <option value="UNUSED">UNUSED</option>
+              <option value="USED">USED</option>
+            </select>
+          </label>
+
+          <label class="filter">
+            정렬:
+            <select id="sortSelect">
+              <option value="DATE_DESC">최신순</option>
+              <option value="DATE_ASC">오래된순</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="tab-panels">
+          <section id="tab-items" class="tab-panel" role="tabpanel">
+            <div class="table-wrap">
+              <table class="table" aria-label="아이템/물품 기록 테이블">
+                <thead>
+                  <tr>
+                    <th>날짜</th>
+                    <th>아이템명</th>
+                    <th>타입</th>
+                    <th>상태</th>
+                    <th>사용일</th>
+                  </tr>
+                </thead>
+                <tbody id="itemHistoryTbody"></tbody>
+              </table>
+            </div>
+            <p class="hint">필터/정렬/빈 상태 UI를 구현해 보세요.</p>
+          </section>
+
+          <section id="tab-coins" class="tab-panel hidden" role="tabpanel">
+            <div class="table-wrap">
+              <table class="table" aria-label="코인 기록 테이블">
+                <thead>
+                  <tr>
+                    <th>날짜</th>
+                    <th>증감</th>
+                    <th>유형</th>
+                    <th>사유</th>
+                  </tr>
+                </thead>
+                <tbody id="coinHistoryTbody"></tbody>
+              </table>
+            </div>
+            <p class="hint">양수/음수 색상 스타일링을 적용해 보세요.</p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="./mockApi.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

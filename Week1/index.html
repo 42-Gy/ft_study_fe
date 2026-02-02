@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUBAK My Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+  
+  <header class="app-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo">🍉</span>
+        <div>
+          <h1 class="title">SUBAK</h1>
+          <p class="subtitle">My Page</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <input type="text" id="token-input" class="token-input" placeholder="인증 토큰을 입력하세요 (예: test)" />
+        <button id="search-btn" class="btn primary">조회</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="error-msg" class="panel hidden" style="border-color: var(--bad); color: var(--bad);"></div>
+
+    <div id="result-container" class="hidden">
+      
+      <div class="grid">
+        
+        <div class="panel">
+          <h2 class="panel-title">내 정보</h2>
+          <div class="row">
+            <span class="label">이름</span>
+            <span class="value" id="user-name">-</span>
+          </div>
+          <div class="row">
+            <span class="label">이메일</span>
+            <span class="value" id="user-email">-</span>
+          </div>
+          <div class="row">
+            <span class="label">역할</span>
+            <span class="value" id="user-role">-</span>
+          </div>
+          <div class="row">
+            <span class="label">보유 코인</span>
+            <span class="value" id="user-coin">-</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h2 class="panel-title">대여 현황</h2>
+            <span id="rental-badge" class="badge">미대여</span>
+          </div>
+          
+          <div class="row">
+            <span class="label">사물함 번호</span>
+            <span class="value" id="locker-num">-</span>
+          </div>
+          <div class="row">
+            <span class="label">대여일</span>
+            <span class="value" id="rental-start">-</span>
+          </div>
+          <div class="row">
+            <span class="label">만료일</span>
+            <span class="value" id="rental-end">-</span>
+          </div>
+        </div>
+      </div> 
+      <div class="panel">
+        <div class="panel-head">
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="item" role="tab" aria-elected="true" aria-controls="table-wrap">아이템 기록</button>
+            <button class="tab" data-tab="coin" role="tab" aria-elected="false" aria-controls="table-wrap">코인 내역</button>
+          </div>
+        </div>
+
+        <div id="filter-container" class="filters">
+    <select id="status-filter">
+      <option value="all">전체 보기</option>
+      <option value="active">보유/획득</option> <option value="used">사용/지출</option> </select>
+        </div>
+
+        <div class="table-wrap" style="margin-top: 14px;">
+          <table class="table">
+            <thead id="table-head">
+              </thead>
+            <tbody id="table-body">
+              </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div> </main>
+
+</body>
+</html>
